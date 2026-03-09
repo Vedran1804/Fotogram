@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICTURES</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body onload="renderImages()">
+
+    <header class="site-header">
+        <img src="./img/Header.png" alt="Header">
+    </header>
+
+    <main class="main-container">
+        <h1>Your personal photo album</h1>
+        <div id="gallery"></div>
+    </main>
+
+    <dialog id="dialog" aria-labelledby="dialogTitle">
+        <div class="dialog-container">
+            <header class="dialog-header">
+                <div id="dialogTitle"></div>
+                <button id="closeBtn" onclick="closeDialog()" aria-label="Close dialog">X</button>
+            </header>
+
+            <div id="dialog-img"></div>
+
+            <div class="dialog-controls">
+                <div id="prevBtn">
+                    <button id="btnPrev" onclick="prevPic()" aria-label="Previous image"><img src="./img/previous.png" alt="Prev"></button>
+                </div>
+                <div id="image-counter"></div>
+                <div id="nextBtn">
+                    <button id="btnNext" onclick="nextPic()" aria-label="Next image"><img src="./img/next.png" alt="Next"></button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <img src="./img/logo.png" alt="logo">
+    </footer>
+
+    
+</body>
+</html>

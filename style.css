@@ -1,0 +1,245 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Figtree', sans-serif;
+    text-align: center;
+    font-size: 65px;
+    color: white;
+}
+
+.main-container {
+    flex: 1;
+    padding: 76px;
+    background-color: rgb(31, 22, 22);
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 24px;
+}
+
+#gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+#gallery img:hover {
+    transform: scale(1.2);
+}
+
+.site-footer {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.site-footer img {
+    width: 150px;
+}
+
+
+/* dialog CSS */
+
+#dialog {
+    position: fixed;
+    width: 80vw;
+    max-width: 508px;
+    height: 500px;
+    max-height: 90vh;
+    background-color: rgb(41, 39, 39);
+    border-radius: 32px;
+    margin: auto;
+    padding: 0;
+    z-index: 1000;
+    
+}
+
+.dialog-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-styling {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#closeBtn {
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 26px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.dialog-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#dialogTitle { 
+    font-family: 'Figtree', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#image-counter {
+    color: white;
+    font-size: 22px;
+}
+
+.dialog-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dialog-controls button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* mediaqueries */
+
+@media (min-width: 601px) and (max-width: 1200px) {
+
+  #dialog { 
+    width: 90vw;
+    margin: auto;
+    position: fixed;
+   
+  }
+  #dialogImg { 
+    height: 300px; 
+  }
+  h1 { 
+    font-size: 50px;
+   }
+  .dialog-controls button img {
+     width: 64px; 
+     height: 64px; }
+}
+
+@media (min-width: 451px) and (max-width: 600px) {
+
+   #dialog {  
+    width: 350px;
+    height: 360px;
+    position: fixed;
+
+  }
+
+  .img-styling { 
+    height: 150px;
+    width: 150px; 
+  }
+
+  #dialogTitle {
+    font-size: 18px;
+  }
+
+  #closeBtn {
+    font-size: 25px;
+  }
+
+  .img-styling { 
+    height: 190px;
+    width: 190px; 
+  }
+  .dialog-controls button img {
+     width: 40px; 
+     height: 40px; }
+
+  #image-counter { 
+    font-size: 15px;
+   }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+
+   .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .site-header img {
+    width: 150px;
+    height: auto;
+   }
+
+  h1 { 
+    font-size: 28px; 
+  }
+
+  #gallery img { 
+    width: 100px; 
+    height: 100px; 
+  }
+
+  #dialog {  
+    width: 250px;
+    height: 320px;
+    position: fixed;
+  }
+
+  #dialogTitle {
+    font-size: 18px;
+  }
+
+  #closeBtn {
+    font-size: 25px;
+  }
+
+  .img-styling { 
+    height: 160px;
+    width: 160px; 
+  }
+  .dialog-controls button img {
+     width: 40px; 
+     height: 40px; }
+
+  #image-counter { 
+    font-size: 15px;
+   }
+}
